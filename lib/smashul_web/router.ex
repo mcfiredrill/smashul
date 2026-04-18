@@ -8,6 +8,7 @@ defmodule SmashulWeb.Router do
     plug :put_root_layout, html: {SmashulWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug SmashulWeb.Plugs.LearnerSession
   end
 
   pipeline :api do
@@ -17,7 +18,8 @@ defmodule SmashulWeb.Router do
   scope "/", SmashulWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", DashboardLive
+    live "/practice", PracticeLive
   end
 
   # Other scopes may use custom stacks.
