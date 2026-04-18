@@ -367,10 +367,10 @@ defmodule SmashulWeb.PracticeLive do
         // Korean Hangul Input Method Engine
         // Maps QWERTY keys to Korean jamo and composes syllable blocks
 
-        // Consonant map (initial/final)
+        // Consonant map (initial/final) - Standard Korean 2-set (두벌식) layout
         const CONSONANTS = {
           'q': 'ㅂ', 'w': 'ㅈ', 'e': 'ㄷ', 'r': 'ㄱ', 't': 'ㅅ',
-          'y': 'ㅛ', 'a': 'ㅁ', 's': 'ㄴ', 'd': 'ㅇ', 'f': 'ㄹ',
+          'a': 'ㅁ', 's': 'ㄴ', 'd': 'ㅇ', 'f': 'ㄹ',
           'g': 'ㅎ', 'z': 'ㅋ', 'x': 'ㅌ', 'c': 'ㅊ', 'v': 'ㅍ',
           // Shift consonants (double)
           'Q': 'ㅃ', 'W': 'ㅉ', 'E': 'ㄸ', 'R': 'ㄲ', 'T': 'ㅆ'
@@ -378,9 +378,10 @@ defmodule SmashulWeb.PracticeLive do
 
         // Vowel map
         const VOWELS = {
-          'k': 'ㅏ', 'o': 'ㅐ', 'i': 'ㅑ', 'O': 'ㅒ', 'j': 'ㅓ',
-          'p': 'ㅔ', 'u': 'ㅕ', 'P': 'ㅖ', 'h': 'ㅗ', 'y': 'ㅛ',
-          'n': 'ㅜ', 'b': 'ㅠ', 'm': 'ㅡ', 'l': 'ㅣ'
+          'y': 'ㅛ', 'u': 'ㅕ', 'i': 'ㅑ', 'o': 'ㅐ', 'p': 'ㅔ',
+          'h': 'ㅗ', 'j': 'ㅓ', 'k': 'ㅏ', 'l': 'ㅣ',
+          'b': 'ㅠ', 'n': 'ㅜ', 'm': 'ㅡ',
+          'O': 'ㅒ', 'P': 'ㅖ'
         };
 
         // Choseong (initial consonant) codes
